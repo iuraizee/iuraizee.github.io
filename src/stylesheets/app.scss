@@ -58,82 +58,23 @@
 
 }
 
-.selected-work-title{
-  max-width: 160px;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  border-bottom: 2px solid rgba(0,0,0, .9);
-}
-
 .block {
   display: inline-block;
   margin: 30px 35px 0 35px;
   max-width: 300px;
   vertical-align: top;
-}
 
-.other-story {
-  display: inline-block;
-  margin-right: 30px;
-  width: 300px;
-  height: auto;
-  vertical-align: top;
-  margin-top: 30px;
-}
-
-.others_imglink{
-  width: 300px;
-  //height: 190px;
-  /*opacity: .4;*/
-}
-
-.others_imglink:hover{
-  transition: all .4s;
-  opacity: 1;
-}
-
-
-.others-block-container{
-  /*background-color: rgba(0,0,0, 1);*/
-  //width: 190px;
-  //height: 190px;
-  text-decoration: none;
-  //box-shadow: 4px 4px 7px -2px rgba(0,0,0,.3);
-  -webkit-filter: grayscale(95%);
-    filter: grayscale(95%);
-/*  -webkit-filter: grayscale(90%);
-    filter: grayscale(90%);*/
-
-    img {
-      width: 100%;
-    }
-}
-
-
-.others-block-container:hover{
-  transition: all .4s;
-    opacity: 1;
-   /* background-color: white;*/
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
-#other-wrapper{
-  padding-bottom: 50px;
+  @media (max-width: 400px) {
+      margin-right: 0px;
+  }
 }
 
 .block-container{
-  /*background-color: rgba(0,0,0, 1);*/
-  /*background: linear-gradient(#7f0000, #206877);*/
-/*  background: linear-gradient(135deg,rgba(255,101,100,.4) 0,rgba(255,101,100,0) 50%,rgba(255,101,100,0) 100%),linear-gradient(45deg,rgba(40,0,215,0) 0,rgba(40,0,215,0) 50%,rgba(40,0,215,.4) 100%),linear-gradient(transparent 1%,rgba(0,0,0,.8) 100%);
-*/
   width: 300px;
   display: table-cell;
   vertical-align: top;
-  //height: 200px;
   margin-bottom: 10px;
   text-decoration: none;
-  //box-shadow: 4px 4px 7px -2px rgba(0,0,0,.3);
 }
 
 .block-container p{
@@ -148,30 +89,9 @@
   opacity: 0.7;
 }
 
-.others_pub{
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-left: 5px;
-  max-width: 150px;
-  color: white;
-  padding: 5px;
-  z-index: 10000;
-  position: absolute;
-  font-size: 0.8em;
-  background-color: rgba(0,0,0, .8);
-  border-radius: 8px;
-}
-
 .publication{
   font-size: 0.8em;
   margin-top: 10px;
   color: #696969;
   display: block;
-}
-
-@media (max-width: 400px) {
-
-  .block{
-    margin-right: 0px;
-  }
 }

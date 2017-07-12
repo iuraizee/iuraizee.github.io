@@ -1,5 +1,5 @@
-import { loadExample } from './modules/index';
+//import { loadExample } from './modules/index';
 import { loadProjects } from './modules/index';
 
-loadExample();
+//loadExample();
 loadProjects();
