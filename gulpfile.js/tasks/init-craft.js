@@ -1,21 +1,22 @@
 const gulp = require('gulp')
-const gutil = require('gulp-util')
+const log = require('fancy-log')
+const colors = require('ansi-colors')
 const mergeStream = require('merge-stream')
-const path = require('path')
+const projectPath = require('../lib/projectPath')
 
 gulp.task('init-craft', function() {
-  const configStream = gulp.src(['extras/craft/**/*', '*!ASSET-README.md'])
-    .pipe(gulp.dest(process.env.PWD))
+  const configStream = gulp.src(['extras/craft/**/*', '!**/ASSETS-README.md'])
+    .pipe(gulp.dest(projectPath()))
 
-  const srcStream = gulp.src(['src/**/*', '*.gitkeep', '!src/html{,/**}', '!src/static{,/**}'])
-    .pipe(gulp.dest(path.join(process.env.PWD, PATH_CONFIG.src)))
+  const srcStream = gulp.src(['src/**/*', 'src/**/.gitkeep', '!src/html{,/**}', '!src/static{,/**}'])
+    .pipe(gulp.dest(projectPath(PATH_CONFIG.src)))
 
 
-  gutil.log(gutil.colors.green('Added gulpRev plugin to craft/plugins/gulprev!'))
-  gutil.log(gutil.colors.green('Created config/path-config.json'))
-  gutil.log(gutil.colors.green('Created config/task-config.js'))
-  gutil.log(
-gutil.colors.green(`Blendid is configured for Craft!
+  log(colors.green('Added gulpRev plugin to craft/plugins/gulprev!'))
+  log(colors.green('Created config/path-config.json'))
+  log(colors.green('Created config/task-config.js'))
+  log(
+colors.green(`Blendid is configured for Craft!
 
 Next Steps
 ==========

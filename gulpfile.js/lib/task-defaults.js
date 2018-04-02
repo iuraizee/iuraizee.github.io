@@ -1,6 +1,7 @@
-const os   = require('os')
-const path = require('path')
-const pkg  = require(path.resolve(process.env.PWD, 'package.json'))
+const os          = require('os')
+const path        = require('path')
+const projectPath = require('./projectPath')
+const pkg         = require(projectPath('package.json'))
 
 module.exports = {
   javascripts: {
@@ -53,7 +54,7 @@ module.exports = {
       }
     },
     htmlmin: {
-      collapseWhitespace: false
+      collapseWhitespace: true
     },
     excludeFolders: ["layouts", "shared", "macros", "data"],
     extensions: ["html", "njk", "json"]
@@ -68,7 +69,7 @@ module.exports = {
   },
 
   ghPages: {
-    branch: "master",
+    branch: "gh-pages",
     cacheDir: path.join(os.tmpdir(), pkg.name || "blendid")
   },
 
