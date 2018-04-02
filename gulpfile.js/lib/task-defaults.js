@@ -69,7 +69,7 @@ module.exports = {
   },
 
   ghPages: {
-    branch: "gh-pages",
+    branch: "master",
     cacheDir: path.join(os.tmpdir(), pkg.name || "blendid")
   },
 
@@ -95,4 +95,3 @@ module.exports = {
     }
   }
 }
-
