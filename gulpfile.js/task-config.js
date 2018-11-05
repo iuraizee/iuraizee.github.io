@@ -12,12 +12,7 @@ module.exports = {
       // files paths are relative to
       // javascripts.dest in path-config.json
       app: ["./app.js"]
-    },
-    // jquery available globally
-    provide: {
-      $: "jquery",
-      jQuery: "jquery"
-    },
+    }
   },
 
   browserSync: {
