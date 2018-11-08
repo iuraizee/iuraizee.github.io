@@ -31,7 +31,7 @@ const loadProjects = () => {
 
 // images
   inner.append('img')
-    .attr('src', function(d) { return d.image })
+    .attr('src', function(d) { return 'images/' + d.image })
     .attr('class', function(d) { return d.featured + ' ' + d.image })
 
 // title

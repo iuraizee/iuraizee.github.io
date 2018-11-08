@@ -1,8 +1,7 @@
-@import 'normalize';
-@import 'bourbon';
-@import 'neat';
-
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
+$bp-1: 35em;
+$bp-2: 50em;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -15,20 +14,30 @@ body {
 */
 
 .header {
-  padding: 10% 10vh;
   margin: 0 auto;
-  max-width: 700px;
+  text-align: center;
+  margin: 30px auto 0;
+
+  @media (min-width: $bp-2) {
+    max-width: 40em;
+  }
 
   h1{
-    font-size: 3em;
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (min-width: $bp-2) {
+      font-size: 3em;
+    }
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.8rem;
-    margin: 20px 0;
+    font-size: 1.1rem;
+    @media (min-width: $bp-2) {
+      font-size: 1.2rem;
+    }
+    line-height: 1.3;
+    margin: 0 0 .5em;
   }
 
   a {
@@ -44,9 +53,8 @@ body {
 */
 
 .container{
-  text-align: center;
-    padding-top: 50px;
-    padding-bottom: 0px;
+    text-align: center;
+    padding-top: 1em;
 
     .block {
       text-align: left
@@ -61,29 +69,29 @@ body {
 
 }
 
-#projects, #other {
-  padding-bottom: 50px;
+#projects {
   max-width: 1200px;
   margin: 0 auto;
+  display: block;
+
+  @media (min-width: $bp-1) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 }
 
 .block {
-  display: inline-block;
-  margin: 30px 35px 0 35px;
-  max-width: 300px;
-  vertical-align: top;
-}
-
-.block-container{
-  width: 300px;
-  display: table-cell;
-  vertical-align: top;
-  margin-bottom: 10px;
-  text-decoration: none;
-}
-
-.block-container p{
-  text-decoration: none;
+  width: 100%;
+  margin: 2em 0;
+  @media (min-width: $bp-1) {
+    flex: 0 45%;
+    margin: 1em 0;
+  }
+  @media (min-width: $bp-2) {
+    flex: 0 30%;
+    margin: 2em 0;
+  }
 }
 
 .block-container img{
@@ -91,11 +99,11 @@ body {
 }
 
 .block-container:hover{
-  opacity: 0.7;
+  opacity: .7;
 }
 
 .publication{
-  font-size: 0.8em;
+  font-size: .8em;
   margin-top: 10px;
   color: #696969;
   display: block;
