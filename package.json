@@ -55,6 +55,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-svgstore": "6.1.0",
     "gulp-watch": "4.3.11",
+    "lazysizes": "^4.1.6",
     "lodash": "^4.17.4",
     "merge-stream": "^1.0.1",
     "minimist": "^1.2.0",

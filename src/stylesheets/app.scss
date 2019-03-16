@@ -108,3 +108,12 @@ body {
   color: #696969;
   display: block;
 }
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}

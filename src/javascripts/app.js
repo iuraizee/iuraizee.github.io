@@ -1,3 +1,4 @@
-import { loadProjects } from './modules/index';
+import lazysizes from 'lazysizes';
+import loadProjects from './modules/index';
 
 loadProjects();
