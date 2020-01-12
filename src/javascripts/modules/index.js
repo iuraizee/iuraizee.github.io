@@ -1,14 +1,15 @@
 import { select, selectAll } from 'd3-selection';
 import { csv } from 'd3-fetch';
+import * as moment from 'moment';
 
 const d3 = { select, selectAll, csv };
 
 const loadProjects = () => {
   d3.csv('projects.csv').then((projects) => {
-    const featured_work = d3.select('#projects');
+    const featuredWork = d3.select('#projects');
 
     // parse for featured
-    const image = featured_work.selectAll('.block')
+    const image = featuredWork.selectAll('.block')
       .data(projects.filter((d) => {
         if (d.featured === 'TRUE') {
           return d;
@@ -28,21 +29,20 @@ const loadProjects = () => {
       .attr('class', 'block-container');
 
     // images
-    inner.append('img')
-      .classed('lazyload', true)
-      .attr('src', d => `images/placeholder.jpg`)
-      .attr('data-src', d => `images/${d.image}`);
+    inner.append('div')
+      .classed('img-wrapper', true)
+      .style('background-image', d => `url('images/${d.image}')`);
 
     // title
-    image.append('span')
+    link.append('span')
       .classed('title', true)
       .text(d => d.title);
 
     // publication
-    image.append('span')
+    link.append('span')
       .classed('publication', true)
-      .text(d => d.pub);
+      .text(d => `${d.pub} | ${moment(d.date).format('MMMM D, YYYY')}`);
   });
-}
+};
 
-export { loadProjects as default }
+export default loadProjects;
