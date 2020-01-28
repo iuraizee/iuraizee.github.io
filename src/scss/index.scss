@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
+
+$bp-1: 45em;
+$bp-2: 70em;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a, a:focus, a:visited, a:active {
+	text-decoration: none;
+	color: #555;
+}
+
+/*
+***************************
+********** HEADER **********
+***************************
+*/
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+  margin: 30px auto 0;
+
+  @media (min-width: $bp-2) {
+    max-width: 40em;
+  }
+
+  h1 {
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+    margin: .25em 0 .25em 0;
+
+    @media (min-width: $bp-2) {
+      font-size: 3em;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    width: 90%;
+    margin: 0 auto 1em;
+    @media (min-width: $bp-2) {
+      font-size: 1.2rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.break {
+  display: inline-block;
+}
+
+.fa {
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+/*
+***************************
+********** CONTENT **********
+***************************
+*/
+
+.container{
+    text-align: center;
+    padding-top: 1em;
+
+    .block {
+      text-align: left
+    }
+
+    h2 {
+      display: inline-block;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-bottom: 2px solid rgba(0,0,0, .9);
+    }
+
+}
+
+#projects {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: $bp-1) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+.block {
+  width: 100%;
+  margin: 2em 0;
+  @media (min-width: $bp-1) {
+    flex: 0 48%;
+    margin: 1em 0;
+  }
+  @media (min-width: $bp-2) {
+    flex: 0 31%;
+    margin: 1.5em 0;
+  }
+
+  &:hover {
+    div.img-wrapper {
+      opacity: 1;
+    }
+
+    .title {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+  opacity: .85;
+}
+
+.publication{
+  font-size: .8em;
+  margin-top: 10px;
+  color: #696969;
+  display: block;
+}
