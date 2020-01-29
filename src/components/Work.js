@@ -13,6 +13,7 @@ const Work = () => {
 
     // parse for featured
     const image = featuredWork.selectAll('.block')
+      // eslint-disable-next-line array-callback-return
       .data(projects.filter((d) => {
         if (d.featured === 'TRUE') {
           return d;
