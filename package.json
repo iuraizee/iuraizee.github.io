@@ -25,10 +25,10 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "predeploy": "next build && next export",
-    "deploy": "gh-pages -b master -d out"
+    "predeploy": "next build && next export && touch out/.nojekyll",
+    "deploy": "gh-pages -t true -b master -d out"
   },
   "eslintConfig": {
     "extends": "react-app"
