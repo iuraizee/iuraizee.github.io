@@ -27,7 +27,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "gh-pages -d build"
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -b master -d out"
   },
   "eslintConfig": {
     "extends": "react-app"
