@@ -1,7 +1,12 @@
 {
-  "name": "portfolio",
+  "name": "iuraizee.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/iuraizee/iuraizee.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iuraizee/iuraizee.github.io.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -21,7 +26,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
