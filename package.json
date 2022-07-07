@@ -15,7 +15,7 @@
     "d3-fetch": "^1.1.2",
     "d3-selection": "^1.4.1",
     "gh-pages": "^2.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "^9.2.1",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.13.1",
